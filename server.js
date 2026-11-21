@@ -1,6 +1,9 @@
 import express from "express";
 const app=express();
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("Express API is running successfully!");
+});
 const products=[];
 //products payload:{id:1,name="laptop",price=50000}
 app.post("/products",(req,res)=>{
